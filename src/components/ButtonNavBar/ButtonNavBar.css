@@ -1,0 +1,11 @@
+.button__nav__bar {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .button__nav__bar {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+}

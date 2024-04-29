@@ -1,0 +1,23 @@
+.brand__container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+h1 {
+  font-size: 40px;
+}
+
+h1:hover {
+  color: #d5bf86;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+.logo:hover {
+  background-color: #8d775f;
+}

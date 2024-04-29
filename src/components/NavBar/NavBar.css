@@ -1,0 +1,15 @@
+.navbar__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background-color: grey; */
+}
+
+@media screen and (max-width: 750px) {
+  .navbar__wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: block;
+    /* background-color: violet; */
+  }
+}

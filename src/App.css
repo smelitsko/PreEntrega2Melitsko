@@ -1,0 +1,33 @@
+/*!----IMPORTAR FUENTE-----*/
+
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Libre+Franklin&family=Montserrat:wght@100&family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+/*!----RESET-----*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem;
+  background-color: #3f0d12;
+  color: white;
+}
+
+.brand__navbar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blue; */
+  width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .brand__navbar__wrapper {
+    display: block;
+  }
+}
