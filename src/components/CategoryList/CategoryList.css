@@ -16,6 +16,10 @@ a:hover {
   color: #d5bf86;
 }
 
+.active-link {
+  background-color: #d5bf86;
+}
+
 @media screen and (max-width: 750px) {
   .category__list {
     flex-direction: column;

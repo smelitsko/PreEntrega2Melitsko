@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { getProductById } from "../mock/asyncMock";
 
 export default function useProduct(id) {
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getProductById(id)
-      .then((data) => setProducts(data))
+      .then((data) => setProduct(data))
       .finally(() => setIsLoading(false));
   }, []);
 
-  return { products, isLoading };
+  return { product, isLoading };
 }
