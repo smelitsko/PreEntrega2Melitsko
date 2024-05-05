@@ -1,8 +1,9 @@
 h2 {
   font-size: 40px;
-  background-color: #8d775f;
-  color: #3f0d12;
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 10px;
+}
+
+h2:hover {
+  color: #d5bf86;
 }

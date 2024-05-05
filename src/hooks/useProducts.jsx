@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../mock/asyncMock";
-import { getProductsByCategory } from "../mock/asyncMock";
+import { getProducts, getProductsByCategory } from "../mock/asyncMock";
 
 export default function useProducts(category) {
   const [products, setProducts] = useState([]);

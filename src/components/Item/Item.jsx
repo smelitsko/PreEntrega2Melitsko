@@ -1,5 +1,3 @@
-import useCount from "../../hooks/useCount";
-import ItemCount from "../ItemCount/ItemCount";
 import { NavLink } from "react-router-dom";
 import "./Item.css";
 

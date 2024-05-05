@@ -9,8 +9,6 @@ function ItemDetailContainer() {
 
   if (isLoading) return <div>Loading...</div>;
 
-  //  console.log({ isLoading, product });
-
   return (
     <div className="container">
       <ItemDetail item={product} />

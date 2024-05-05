@@ -1,11 +1,11 @@
 import { useState } from "react";
-
+import useScreenSize from "../../hooks/useScreenSize";
 import ButtonNavBar from "../ButtonNavBar/ButtonNavBar";
 import Brand from "../Brand/Brand";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import "./Layout.css";
-import useScreenSize from "../../hooks/useScreenSize";
+
 function Layout({ children }) {
   const screenSize = useScreenSize();
   const [visible, setVisible] = useState(false);
