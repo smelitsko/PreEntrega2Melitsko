@@ -29,6 +29,7 @@ function CategoryList() {
             <NavLink
               className={({ isActive }) => (isActive ? "active-link" : "")}
               to={ruta.path}
+              key={ruta.path}
             >
               {ruta.label}
             </NavLink>

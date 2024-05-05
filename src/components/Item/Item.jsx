@@ -1,43 +1,17 @@
 import useCount from "../../hooks/useCount";
 import ItemCount from "../ItemCount/ItemCount";
+import { NavLink } from "react-router-dom";
 import "./Item.css";
 
 const Item = ({ item }) => {
-  const { count, increment, decrement } = useCount(0);
-
-  const onAdd = (nombreDeItem, cantidadaLlevar) => {
-    console.log("nombreDeItem: ", nombreDeItem);
-    console.log("cantidadaLlevar: ", cantidadaLlevar);
-  };
-
-  // console.log({ count, item });
-
   return (
     <div className="item__container">
-      {/* <h3>{item.titulo}</h3> */}
-      <p>{item.id}</p>
-
-      <div className="item--img__container">
-        <img className="item--img" src={item.img} />
-      </div>
-      <p>${item.precio}</p>
-      <div>
-        <ItemCount
-          stock={item.stock}
-          count={count}
-          increment={increment}
-          decrement={decrement}
-        />
-      </div>
-
-      <div>
-        <button
-          className="item--cart__button"
-          onClick={() => onAdd(item, count)}
-        >
-          Agregar
-        </button>
-      </div>
+      <img className="item--img" src={item.img} />
+      {/* <p className="">{item.titulo}</p> */}
+      <p className="lista-precio">${item.precio}</p>
+      <NavLink className="ver-mas" to={`/item/${item.id}`}>
+        Ver más
+      </NavLink>
     </div>
   );
 };

@@ -5,7 +5,7 @@
 }
 
 .item__count__container {
-  border: 1px solid rgb(190, 190, 190);
+  border: 1px solid #3f0d12;
   width: 200px;
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@
   padding: 3px;
 }
 
-.counter{
-  background-color:transparent;
+.counter {
+  background-color: transparent;
   padding: 2px;
 }
