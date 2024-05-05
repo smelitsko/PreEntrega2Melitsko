@@ -17,11 +17,12 @@ li {
 }
 
 a:hover {
-  color: #d5bf86;
+  opacity: 50%;
 }
 
 .active-link {
   background-color: #d5bf86;
+  padding: 5px;
 }
 
 @media screen and (max-width: 900px) {
