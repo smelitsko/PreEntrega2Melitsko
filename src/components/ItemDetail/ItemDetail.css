@@ -62,9 +62,40 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 750px) {
+  .item__detail__container {
+    max-width: 80%;
+  }
+  .item--img {
+    max-width: 80%;
+    object-fit: cover;
+    transition: 1s ease-in;
+  }
+
+  .titulo {
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+  .autor {
+    font-size: 16px;
+    color: grey;
+  }
+
+  .precio {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .item__detail__container {
-    flex-direction: column;
-    height: 700px;
+    flex-direction: column-reverse;
+    height: 680px;
+  }
+  .item--img {
+    max-width: 100%;
+    object-fit: cover;
+    transition: 1s ease-in;
   }
 }
