@@ -7,9 +7,9 @@
   align-items: center;
   justify-content: space-around;
   background-color: #ffdc85;
-  width: 600px;
-  height: 400px;
-  margin-bottom: 20px;
+  width: 700px;
+  height: 450px;
+  margin-top: 20px;
   box-shadow: 10px 10px 27px -6px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 27px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 27px -6px rgba(0, 0, 0, 0.75);
@@ -60,4 +60,11 @@
   border-radius: 4px;
   font-size: 1.025rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .item__detail__container {
+    flex-direction: column;
+    height: 700px;
+  }
 }
