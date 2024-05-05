@@ -6,7 +6,7 @@ import "./Item.css";
 const Item = ({ item }) => {
   return (
     <div className="item__container">
-      <img className="item--img" src={item.img} />
+      <img className="item--img" src={`/${item.img}`} />
       {/* <p className="">{item.titulo}</p> */}
       <p className="lista-precio">${item.precio}</p>
       <NavLink className="ver-mas" to={`/item/${item.id}`}>
