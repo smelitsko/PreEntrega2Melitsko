@@ -3,3 +3,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.cargando {
+  font-size: 50px;
+  text-align: center;
+}
