@@ -5,7 +5,7 @@ import "./ItemDetailContainer.css";
 
 function ItemDetailContainer() {
   const { itemId } = useParams();
-  const { isLoading, product } = useProduct(Number(itemId));
+  const { isLoading, product } = useProduct(itemId);
 
   if (isLoading) return <div>Loading...</div>;
 

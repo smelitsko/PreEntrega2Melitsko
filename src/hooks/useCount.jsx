@@ -10,8 +10,11 @@ const useCount = (initialValue = 0) => {
   const decrement = () => {
     setCount(count - 1);
   };
+  const reset = () => {
+    setCount(initialValue);
+  };
 
-  return { count, increment, decrement };
+  return { count, increment, decrement, reset };
 };
 
 export default useCount;

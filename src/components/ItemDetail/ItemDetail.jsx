@@ -1,16 +1,17 @@
+import { useContext } from "react";
+import CartContext from "../../contexts/CartContext/CartContext";
+
 import "./ItemDetail.css";
 import useCount from "../../hooks/useCount";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ item }) => {
-  const { count, increment, decrement } = useCount(0);
-
-  const onAdd = (nombreDeItem, cantidadaLlevar) => {
-    console.log("nombreDeItem: ", nombreDeItem);
-    console.log("cantidadaLlevar: ", cantidadaLlevar);
+  const { count, increment, decrement, reset } = useCount(0);
+  const { addToCart } = useContext(CartContext);
+  const handleAddToCart = () => {
+    addToCart(item, count);
+    reset();
   };
-
-  // console.log({ count, item });
 
   return (
     <div className="item__detail__container">
@@ -34,7 +35,8 @@ const ItemDetail = ({ item }) => {
         <div>
           <button
             className="item--cart__button"
-            onClick={() => onAdd(item, count)}
+            onClick={handleAddToCart}
+            disabled={count === 0}
           >
             Agregar
           </button>

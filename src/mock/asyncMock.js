@@ -155,7 +155,7 @@ const products = [
       id: 16,
       titulo: "poesia completa",
       autor: "Anne Sexton",
-      editorial: "Eterna Cadencia",
+      editorial: "Lumen",
       category: "poesia",
       precio: 30000,
       stock: 5,
