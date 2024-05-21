@@ -20,7 +20,6 @@ export default function CartProvider({ children }) {
     } else {
       setCart([...cart, { product, quantity }]);
     }
-    console.log(cart);
   };
 
   useEffect(() => {
