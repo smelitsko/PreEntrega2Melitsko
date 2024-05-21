@@ -7,19 +7,9 @@ export default function CartItem({ item }) {
 
   return (
     <div key={item} className="carrito-contenido">
-      <tr>
-        <td>{item.product.titulo}</td>
-        <td>Cantidad: {item.quantity}</td>
-        <td>Precio: ${item.product.precio}</td>
-      </tr>
-      {/*       <div className="">
-        <div>{<img className="small" src={`/${item.product.img}`} />}</div>
-        <div>
-          <p>{item.product.titulo}</p>
-          <p>Cantidad: {item.quantity}</p>
-          <p>Precio: ${item.product.precio}</p>
-        </div>
-      </div>
+      <p>{item.product.titulo}</p>
+      <p>Cantidad: {item.quantity}</p>
+      <p>Precio: ${item.product.precio}</p>
       <div className="">
         <button className="" onClick={() => removeFromCart(item.product.id, 1)}>
           -
@@ -28,7 +18,6 @@ export default function CartItem({ item }) {
           +
         </button>
       </div>
- */}{" "}
     </div>
   );
 }
