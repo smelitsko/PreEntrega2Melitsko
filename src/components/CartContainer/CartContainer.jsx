@@ -1,15 +1,17 @@
 import { useContext } from "react";
 import CartContext from "../../contexts/CartContext/CartContext";
 import CartItem from "../CartItem/CartItem";
+import CartItemHeader from "../CartItemHeader/CartItemHeader";
 import { Link } from "react-router-dom";
-
+import "./CartContainer.css";
 export default function CartContainer() {
   const { cart, clearCart, cartTotal } = useContext(CartContext);
 
   return (
-    <div className="">
+    <div className="main-container">
       <h2 className="">Mi Carrito</h2>
-      <div className="">
+      <div className="sub-container">
+        <CartItemHeader />
         {cart.length === 0 ? (
           <h1>No hay productos en el carrito</h1>
         ) : (

@@ -1,0 +1,30 @@
+.main-container {
+  /* border: blue solid; */
+}
+.sub-container {
+  /* border: red solid; */
+}
+.cart-container {
+  width: 50%;
+  margin: 30px 20px 30px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-auto-rows: 150px;
+  border: solid;
+}
+
+.grid--img {
+  height: 100%;
+}
+
+.grid--item {
+  align-self: center;
+}
+
+.header {
+  grid-template-rows: 50px;
+}
+
+.center {
+  justify-self: center;
+}
