@@ -61,6 +61,7 @@ export default function Checkout() {
           value={buyer.email}
           onChange={handleInputChange}
         />
+
         <br />
         <button type="submit">Comprar</button>
       </form>

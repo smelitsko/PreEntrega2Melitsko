@@ -21,13 +21,21 @@ export default function CartContainer() {
         )}
       </div>
 
-      <h3 className="">Total: ${cartTotal}</h3>
-      <button className="" onClick={clearCart}>
-        Limpiar carrito
-      </button>
+      <div className="cart-footer">
+        <p></p>
+
+        <p>Total:</p>
+
+        <p>${cartTotal}</p>
+        <p></p>
+      </div>
+
       <Link to={`/checkout`}>
         <button>Terminar la compra</button>
       </Link>
+      <button className="" onClick={clearCart}>
+        Limpiar carrito
+      </button>
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function CartItem({ item }) {
       </div>
       <div className="grid--item">
         <p>{item.product.titulo}</p>
-        <p>Precio:$ {item.product.precio}</p>
+        <p>$ {item.product.precio}</p>
       </div>
       <p className="grid--item">${item.product.precio * item.quantity}</p>
       <div className="grid--item center item__count__container">
