@@ -1,6 +1,6 @@
 # LiberArt
 
-### Este proyecto es un e-commerce creado con Vite JS + React para el curso React de la plataforma CoderHouse.
+### Este proyecto es un e-commerce creado con Vite JS + React.
 
 ##### Pasos para levantar el proyecto
 
@@ -11,3 +11,5 @@
 
 - Paula López
 - Juliana Domínguez
+
+Encontrarás la distribución en: [Netlify](https://liberart-react.netlify.app/) .
