@@ -1,22 +1,14 @@
 import { useContext } from "react";
 import CartContext from "../../contexts/CartContext/CartContext";
-import { collection, getFirestore, addDoc } from "firebase/firestore";
-import { useState } from "react";
+import { collection, getFirestore, addDoc, doc } from "firebase/firestore";
+import useBuyer from "../../hooks/useBuyer";
+import CartDetails from "../CartDetails/CartDetails";
 
 export default function Checkout() {
   const { cart, clearCart, cartTotal } = useContext(CartContext);
-  const [idOrderSaved, setIdOrderSaved] = useState("");
-  const [buyer, setBuyer] = useState({
-    name: "",
-    lastName: "",
-    email: "",
-  });
+  const { buyer, handleInputChange } = useBuyer();
 
-  const handleInputChange = (e) => {
-    setBuyer({ ...buyer, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const order = {
       buyer,
@@ -28,12 +20,16 @@ export default function Checkout() {
 
     const ordersCollection = collection(db, "orders");
 
-    addDoc(ordersCollection, order).then(({ id }) => setIdOrderSaved);
+    addDoc(ordersCollection, order).then(({ id }) => {
+      alert(`Compra realizada con éxito, tu número de orden es: ${id}`);
+      clearCart();
+    });
   };
 
   return (
     <div className="">
       <h2 className="">Checkout</h2>
+
       <form onSubmit={handleSubmit}>
         <label> Nombre </label>
         <input
@@ -44,12 +40,12 @@ export default function Checkout() {
           onChange={handleInputChange}
         />
         <br />
-        <label> Apellido </label>
+        <label> Telephone </label>
         <input
           type="text"
-          placeholder="Apellido del comprador"
-          name="lastName"
-          value={buyer.lastName}
+          placeholder="Telefono del comprador"
+          name="telephone"
+          value={buyer.telephone}
           onChange={handleInputChange}
         />
         <br />
@@ -63,6 +59,7 @@ export default function Checkout() {
         />
 
         <br />
+        <CartDetails cart={cart} cartTotal={cartTotal} />
         <button type="submit">Comprar</button>
       </form>
     </div>

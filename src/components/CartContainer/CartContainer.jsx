@@ -8,12 +8,12 @@ export default function CartContainer() {
   const { cart, clearCart, cartTotal } = useContext(CartContext);
 
   return (
-    <div className="main-container">
-      <h2 className="">Mi Carrito</h2>
-      <div className="sub-container">
+    <div className="">
+      <h2>Mi Carrito</h2>
+      <div className="">
         <CartItemHeader />
         {cart.length === 0 ? (
-          <h1>No hay productos en el carrito</h1>
+          <h3>No hay productos en el carrito</h3>
         ) : (
           cart.map((item) => {
             return <CartItem key={item.product.id} item={item} />;
@@ -24,37 +24,19 @@ export default function CartContainer() {
       <div className="cart-footer">
         <p></p>
 
-        <p>Total:</p>
+        <p className="total">Total:</p>
 
-        <p>${cartTotal}</p>
+        <p className="total">${cartTotal}</p>
         <p></p>
       </div>
-
-      <Link to={`/checkout`}>
-        <button>Terminar la compra</button>
-      </Link>
-      <button className="" onClick={clearCart}>
-        Limpiar carrito
-      </button>
+      <div className="button-container">
+        <Link to={`/checkout`}>
+          <button className="checkout">Terminar la compra</button>
+        </Link>
+        <button className="checkout black" onClick={clearCart}>
+          Limpiar carrito
+        </button>
+      </div>
     </div>
   );
-}
-
-{
-  /* <table>
-<tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Gender</th>
-</tr>
-{data.map((val, key) => {
-    return (
-        <tr key={key}>
-            <td>{val.name}</td>
-            <td>{val.age}</td>
-            <td>{val.gender}</td>
-        </tr>
-    )
-})}
-</table> */
 }

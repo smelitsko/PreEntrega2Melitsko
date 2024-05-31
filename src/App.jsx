@@ -6,7 +6,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import CartProvider from "./contexts/CartContext/CartProvider";
 import CartContainer from "./components/CartContainer/CartContainer";
 import Checkout from "./components/Checkout/Checkout";
-import { useState, useEffect } from "react";
 
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 

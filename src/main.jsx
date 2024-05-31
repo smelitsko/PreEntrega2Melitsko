@@ -4,13 +4,13 @@ import App from "./App.jsx";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyABkTcgTKZ7BD9AYMPH1AaGP2al-2fkjfY",
-  authDomain: "libreria-liber-art.firebaseapp.com",
-  projectId: "libreria-liber-art",
-  storageBucket: "libreria-liber-art.appspot.com",
-  messagingSenderId: "786605510372",
-  appId: "1:786605510372:web:c39f238656dff0330626f1",
-  measurementId: "G-7897XYX78H"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
