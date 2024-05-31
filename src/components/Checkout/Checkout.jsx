@@ -1,8 +1,14 @@
 import { useContext } from "react";
 import CartContext from "../../contexts/CartContext/CartContext";
-import { collection, getFirestore, addDoc, doc } from "firebase/firestore";
+import {
+  collection,
+  getFirestore,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
 import useBuyer from "../../hooks/useBuyer";
 import CartDetails from "../CartDetails/CartDetails";
+import "./Checkout.css";
 
 export default function Checkout() {
   const { cart, clearCart, cartTotal } = useContext(CartContext);
@@ -14,6 +20,7 @@ export default function Checkout() {
       buyer,
       cart,
       cartTotal,
+      createdAt: serverTimestamp(),
     };
 
     const db = getFirestore();
@@ -30,11 +37,11 @@ export default function Checkout() {
     <div className="">
       <h2 className="">Checkout</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form className="order-form" onSubmit={handleSubmit}>
         <label> Nombre </label>
         <input
           type="text"
-          placeholder="Nombre del comprador"
+          placeholder="nombre del comprador"
           name="name"
           value={buyer.name}
           onChange={handleInputChange}
@@ -43,7 +50,7 @@ export default function Checkout() {
         <label> Telephone </label>
         <input
           type="text"
-          placeholder="Telefono del comprador"
+          placeholder="telefono del comprador"
           name="telephone"
           value={buyer.telephone}
           onChange={handleInputChange}
@@ -52,7 +59,7 @@ export default function Checkout() {
         <label> Email </label>
         <input
           type="email"
-          placeholder="Email del comprador"
+          placeholder="email del comprador"
           name="email"
           value={buyer.email}
           onChange={handleInputChange}
@@ -60,7 +67,11 @@ export default function Checkout() {
 
         <br />
         <CartDetails cart={cart} cartTotal={cartTotal} />
-        <button type="submit">Comprar</button>
+        <div className="container">
+          <button className="checkout" type="submit">
+            Comprar
+          </button>
+        </div>
       </form>
     </div>
   );
