@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CartContext from "../../contexts/CartContext/CartContext";
-import "../ItemCount/ItemCount.css";
+import "./CartItem.css";
 
 export default function CartItem({ item }) {
   const { removeFromCart, addToCart } = useContext(CartContext);
@@ -15,7 +15,7 @@ export default function CartItem({ item }) {
         <p>$ {item.product.precio}</p>
       </div>
       <p className="grid--item">${item.product.precio * item.quantity}</p>
-      <div className="grid--item center item__count__container">
+      <div className="grid--item item__count__container">
         <button
           className="up__down"
           onClick={() => removeFromCart(item.product.id, 1)}

@@ -20,7 +20,7 @@ export default function Checkout() {
       buyer,
       cart,
       cartTotal,
-      createdAt: serverTimestamp(),
+      date: serverTimestamp(),
     };
 
     const db = getFirestore();
